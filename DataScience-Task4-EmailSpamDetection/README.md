@@ -1,14 +1,42 @@
 # Task 4 — Email & SMS Spam Detection with NLP
 
+<div align="center">
+
+[![Track](https://img.shields.io/badge/Track-Data%20Science-2ea44f?style=for-the-badge&logo=python&logoColor=white)](https://oasisinfobyte.com/)
+[![Task](https://img.shields.io/badge/Task-4%20--%20Email%20Spam%20Detection-blue?style=for-the-badge)](https://oasisinfobyte.com/)
+[![Status](https://img.shields.io/badge/Status-100%25%20Completed-brightgreen?style=for-the-badge)](#-oasis-infobyte-task-checklist-compliance)
+[![Best Model](https://img.shields.io/badge/Best%20Model-Linear%20SVM%20(F1%3D0.943)-blueviolet?style=for-the-badge)](#-performance-benchmark--trade-off-analysis)
+
 **Program:** Oasis Infobyte Summer Internship Program (SIP) — Data Science Track  
 **Author:** **Youssef Laaroussi** (Master's in Data Science & Artificial Intelligence)  
 **Deliverable:** `Email_Spam_Detection.ipynb` (Google Colab & Jupyter Ready, Pre-executed)
+
+</div>
 
 ---
 
 ## 📌 Executive Summary & Objective
 
-Design and deploy a Natural Language Processing (NLP) classification pipeline to accurately distinguish between spam (unsolicited commercial/malicious messages) and ham (legitimate communication). The project focuses on real-world NLP text preprocessing, handling severe class imbalance, and analyzing the asymmetric trade-off between Precision and Recall in communication systems.
+Design, train, and evaluate a Natural Language Processing (NLP) binary classification pipeline to accurately detect spam messages (unsolicited commercial, fraudulent, or malicious communication) from legitimate personal messages (ham). 
+
+The analysis places significant emphasis on **production text preprocessing, addressing severe class imbalance, and rigorously exploring the asymmetric cost trade-off between Precision and Recall** in practical communication infrastructures.
+
+---
+
+## ✅ Oasis Infobyte Task Checklist Compliance
+
+| # | Oasis Infobyte Feature Requirement | Status | Implementation Details & Section Reference |
+| :-: | :--- | :---: | :--- |
+| 1 | **Download a suitable dataset** | `[x]` Done | Sourced SMS Spam Collection benchmark dataset (5,572 raw records) (Section 2) |
+| 2 | **Data loading & class distribution check** | `[x]` Done | Documented heavy class imbalance (87.4% Ham vs. 12.6% Spam) (Section 3) |
+| 3 | **Text preprocessing pipeline** | `[x]` Done | Lowercasing, HTML entity decoding, punctuation/digit removal, stopwords, NLTK lemmatization (Section 4) |
+| 4 | **TF-IDF Feature extraction** | `[x]` Done | Extracted 3,000 max features via `TfidfVectorizer` with inline mathematical explanation (Section 5) |
+| 5 | **Train / test split** | `[x]` Done | 80/20 train/test partition stratified by class ratio (`stratify=y`) (Section 6) |
+| 6 | **Train at least 2 classifiers** | `[x]` Done | 3 classifiers trained: Multinomial Naive Bayes (industry baseline), Balanced Logistic Regression, Balanced Linear SVM (Section 7) |
+| 7 | **Model Evaluation Suite** | `[x]` Done | Accuracy, Precision, Recall, F1-Score, and individual Confusion Matrices for all models (Section 8) |
+| 8 | **Discussion: Why is Recall critical?** | `[x]` Done | In-depth operational analysis comparing False Positive vs. False Negative business costs (Section 9) |
+| 9 | **(Bonus) WordCloud visualisations** | `[x]` Done | High-resolution WordClouds contrasting top Spam terms against authentic Ham vocabulary (Section 10) |
+| 10 | **Clean, commented Jupyter Notebook** | `[x]` Done | Fully executed notebook with reproducible NLTK pipeline and rich visualizations |
 
 ---
 
@@ -30,7 +58,7 @@ The dataset contains 5,572 raw records with an 87.4% Ham vs. 12.6% Spam distribu
 ![Class Distribution](assets/spam_ham_class_distribution.png)
 
 ### 2. Multi-Model Confusion Matrix Comparison
-Comparing Multinomial Naive Bayes, Balanced Logistic Regression, and Balanced Linear SVM:
+Comparing Multinomial Naive Bayes, Balanced Logistic Regression, and Balanced Linear SVM under identical stratified test splits:
 
 ![Confusion Matrices Comparison](assets/models_confusion_matrices.png)
 
@@ -50,7 +78,8 @@ Spam messages are heavily clustered around urgency, monetary rewards, and action
 | Multinomial Naive Bayes | 97.7% | 98.4% | 85.3% | 0.914 | 2 | 22 |
 
 > **Applied Decision Insight:**  
-> Multinomial Naive Bayes minimizes False Positives (only 2 legitimate messages misclassified), making it ideal when missing an important email is catastrophic. Conversely, Linear SVM achieves the highest overall F1-score (0.943) with an optimal balance between catching malicious threats and preserving user trust.
+> **Multinomial Naive Bayes** minimizes False Positives (only 2 legitimate messages misclassified out of 966), making it ideal when misclassifying an important legitimate email is catastrophic.  
+> **Linear SVM** achieves the highest overall F1-score (0.943) and balanced detection (94.7% Recall), making it the optimal model for maximizing spam filtering without degrading system reliability.
 
 ---
 
@@ -58,10 +87,10 @@ Spam messages are heavily clustered around urgency, monetary rewards, and action
 
 ```text
 DataScience-Task4-EmailSpamDetection/
-├── Email_Spam_Detection.ipynb       # Complete pre-executed notebook with outputs
-├── spam.csv                         # Source SMS Spam Collection dataset
-├── README.md                        # Technical report & NLP documentation
-└── assets/                          # Generated visualization assets
+├── Email_Spam_Detection.ipynb         # Full interactive notebook with all outputs
+├── spam.csv                           # SMS Spam Collection dataset (5,572 records)
+├── README.md                          # Technical report & NLP documentation
+└── assets/                            # High-resolution generated plots
     ├── spam_ham_class_distribution.png
     ├── models_confusion_matrices.png
     └── wordclouds_spam_vs_ham.png
@@ -71,8 +100,8 @@ DataScience-Task4-EmailSpamDetection/
 
 ## 🚀 How to Run
 
-1. Keep `spam.csv` in the local directory.
-2. Run notebook:
+1. Ensure `spam.csv` is located in this directory.
+2. Launch with Jupyter Notebook:
    ```bash
    jupyter notebook Email_Spam_Detection.ipynb
    ```

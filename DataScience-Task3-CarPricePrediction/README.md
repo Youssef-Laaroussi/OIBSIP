@@ -1,20 +1,49 @@
 # Task 3 — Used Car Price Prediction with Machine Learning
 
+<div align="center">
+
+[![Track](https://img.shields.io/badge/Track-Data%20Science-2ea44f?style=for-the-badge&logo=python&logoColor=white)](https://oasisinfobyte.com/)
+[![Task](https://img.shields.io/badge/Task-3%20--%20Car%20Price%20Prediction-blue?style=for-the-badge)](https://oasisinfobyte.com/)
+[![Status](https://img.shields.io/badge/Status-100%25%20Completed-brightgreen?style=for-the-badge)](#-oasis-infobyte-task-checklist-compliance)
+[![Best Model](https://img.shields.io/badge/Best%20Model-Random%20Forest%20(R%C2%B2%3D0.865)-blueviolet?style=for-the-badge)](#-model-performance-benchmark-evaluated-in-)
+
 **Program:** Oasis Infobyte Summer Internship Program (SIP) — Data Science Track  
 **Author:** **Youssef Laaroussi** (Master's in Data Science & Artificial Intelligence)  
 **Deliverable:** `Car_Price_Prediction.ipynb` (Google Colab & Jupyter Ready, Pre-executed)
+
+</div>
 
 ---
 
 ## 📌 Executive Summary & Objective
 
-Build and compare multiple machine learning regression models to predict used car market valuations based on vehicle attributes (brand, vehicle age, mileage, fuel type, transmission, seller type, and ownership history). Every design choice—from target transformation to encoding—is grounded in empirical data analysis.
+Build and compare multiple machine learning regression models to predict used car market valuations based on vehicle attributes (brand, vehicle age, mileage, fuel type, transmission, seller type, and ownership history). 
+
+Every engineering and modelling decision—from non-linear brand token extraction to target stabilization via logarithmic transformation—is substantiated by empirical validation and business domain logic.
+
+---
+
+## ✅ Oasis Infobyte Task Checklist Compliance
+
+| # | Oasis Infobyte Feature Requirement | Status | Implementation Details & Section Reference |
+| :-: | :--- | :---: | :--- |
+| 1 | **Download a suitable dataset** | `[x]` Done | Sourced CarDekho used car dataset (4,340 listings, 8 attributes) (Section 2) |
+| 2 | **Data cleaning: nulls, duplicates & categories** | `[x]` Done | Verified zero nulls, removed 763 duplicate listings, unified categorical strings (Section 3) |
+| 3 | **Feature engineering: age & brand** | `[x]` Done | Derived `car_age` and extracted brand names with handling for compound brands (`Land Rover`, `OpelCorsa`) (Section 4) |
+| 4 | **EDA: distribution, boxplots & scatter** | `[x]` Done | Analyzed price right-skewness (log1p transform), price vs. fuel type boxplot, and price vs. age scatter (Section 5) |
+| 5 | **Encode categorical variables** | `[x]` Done | Domain-tailored encoding: Ordinal for ownership tiers, One-Hot Encoding for nominal variables (Section 6) |
+| 6 | **Feature correlation heatmap** | `[x]` Done | Correlation matrix illustrating strong negative correlation with `car_age` ($r = -0.42$) (Section 7) |
+| 7 | **Train / test split** | `[x]` Done | 80/20 train/test split with target transformation (`np.log1p`) to stabilize variance (Section 8) |
+| 8 | **Train at least 2 regression models** | `[x]` Done | 3 models trained: Linear Regression (baseline), Random Forest Regressor, Gradient Boosting Regressor (Section 9) |
+| 9 | **Evaluate using MAE, RMSE, and R² score** | `[x]` Done | Exponentiated predictions back to real Indian Rupees (₹) for transparent business evaluation (Section 10) |
+| 10 | **Feature importance chart for best model** | `[x]` Done | Extracted and visualized Random Forest Gini feature importances highlighting `car_age` and luxury brands (Section 11) |
+| 11 | **Clean, commented Jupyter Notebook** | `[x]` Done | Production-grade notebook with assertions, markdown explanations, and pre-computed visual outputs |
 
 ---
 
 ## 🔬 Skills & Methodological Rigor
 
-- **Production-grade free-text feature engineering:** Extracted car brand from complex raw strings, explicitly handling real-world anomalies (e.g., compound brand `"Land Rover"` and concatenated typos `"OpelCorsa"`), verified with programmatical assertions.
+- **Production-grade free-text feature engineering:** Extracted car brand from free-text strings, explicitly handling real-world anomalies (compound brand `"Land Rover"` and concatenated typos `"OpelCorsa"`), verified with programmatical assertions.
 - **Time-aware feature derivation:** Derived `car_age` relative to dataset capture year rather than system timestamp to eliminate temporal data leakage.
 - **Domain-aligned encoding strategy:** Applied ordinal encoding for inherently ordered variables (`owner`: Test Drive Car $\rightarrow$ First $\rightarrow$ Second $\rightarrow$ Third $\rightarrow$ Fourth & Above) and one-hot encoding for nominal variables (`fuel`, `seller_type`, `transmission`, `brand`).
 - **Target stabilization:** Handled severe right-skew in `selling_price` (skewness $\approx 4.9$) via `log1p` transformation during training, with predictions exponentiated back to Indian Rupees (₹) before metric evaluation.
@@ -65,10 +94,10 @@ Vehicle age and premium brand markers (e.g., BMW, Audi, Mercedes-Benz, Toyota) d
 
 ```text
 DataScience-Task3-CarPricePrediction/
-├── Car_Price_Prediction.ipynb       # Full interactive notebook with all visualizations
-├── CAR DETAILS FROM CAR DEKHO.csv   # Source dataset (3,577 deduplicated records)
-├── README.md                        # Technical report & documentation
-└── assets/                          # High-resolution generated plots
+├── Car_Price_Prediction.ipynb         # Full interactive notebook with all outputs
+├── CAR DETAILS FROM CAR DEKHO.csv     # Deduplicated source dataset (4,340 listings)
+├── README.md                          # Technical report & econometric evaluation
+└── assets/                            # High-resolution generated plots
     ├── price_distribution_skewness.png
     ├── price_vs_fuel_type.png
     ├── features_correlation_heatmap.png
@@ -80,8 +109,8 @@ DataScience-Task3-CarPricePrediction/
 
 ## 🚀 How to Run
 
-1. Keep `CAR DETAILS FROM CAR DEKHO.csv` in the current folder.
-2. Run notebook:
+1. Ensure `CAR DETAILS FROM CAR DEKHO.csv` is located in this directory.
+2. Launch with Jupyter Notebook:
    ```bash
    jupyter notebook Car_Price_Prediction.ipynb
    ```
