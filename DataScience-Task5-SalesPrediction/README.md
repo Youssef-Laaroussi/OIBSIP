@@ -4,7 +4,7 @@
 
 [![Track](https://img.shields.io/badge/Track-Data%20Science-2ea44f?style=for-the-badge&logo=python&logoColor=white)](https://oasisinfobyte.com/)
 [![Task](https://img.shields.io/badge/Task-5%20--%20Sales%20Prediction-blue?style=for-the-badge)](https://oasisinfobyte.com/)
-[![Status](https://img.shields.io/badge/Status-100%25%20Completed-brightgreen?style=for-the-badge)](#-oasis-infobyte-task-checklist-compliance)
+[![Status](https://img.shields.io/badge/Status-100%25%20Completed-brightgreen?style=for-the-badge)](#-project-checklist)
 [![Best Model](https://img.shields.io/badge/Best%20Model-Polynomial%20(R%C2%B2%3D0.986)-blueviolet?style=for-the-badge)](#-model-performance-comparison)
 
 **Program:** Oasis Infobyte Summer Internship Program (SIP) — Data Science Track  
@@ -23,22 +23,22 @@ The core contribution of this project is conducting **rigorous residual diagnost
 
 ---
 
-## ✅ Oasis Infobyte Task Checklist Compliance
+## 📋 Project Checklist
 
-| # | Oasis Infobyte Feature Requirement | Status | Implementation Details & Section Reference |
-| :-: | :--- | :---: | :--- |
-| 1 | **Download a suitable dataset** | ✅ Done | Sourced authentic Advertising.csv dataset (200 market campaigns) (Section 2) |
-| 2 | **Data loading and EDA** | ✅ Done | Shape verification, null check (0 missing values), descriptive statistics (Section 3.1–3.3) |
-| 3 | **Pairplot of all features** | ✅ Done | Multi-variable pairplot demonstrating non-linear concave growth along TV spend (Section 3.4) |
-| 4 | **Individual scatter plots** | ✅ Done | 3-panel scatter series: Sales vs. TV, Sales vs. Radio, Sales vs. Newspaper (Section 4) |
-| 5 | **Correlation matrix heatmap** | ✅ Done | Correlation heatmap quantifying linear relationships ($TV: 0.78$, $Radio: 0.58$, $Newspaper: 0.23$) (Section 5) |
-| 6 | **Train / test split** | ✅ Done | 80/20 train/test partition (`random_state=42`) (Section 6) |
-| 7 | **Train Linear Regression baseline** | ✅ Done | Fitted OLS Linear Regression model as the standard baseline (Section 7) |
-| 8 | **Train at least one additional model** | ✅ Done | Evaluated 2 advanced alternatives: Random Forest Regressor and Degree-2 Polynomial Regression (Section 7) |
-| 9 | **Evaluate using MAE, RMSE, and R² score** | ✅ Done | Comprehensive metric benchmarking across train and held-out test splits (Section 8) |
-| 10 | **Residual plot for the best model** | ✅ Done | Plotted residuals vs. predictions proving elimination of systematic errors under Polynomial Regression (Section 9) |
-| 11 | **Interpretation: Channel impact hierarchy** | ✅ Done | Attribution evaluated via standardized beta coefficients and Random Forest feature importances (Section 10) |
-| 12 | **Clean, well-commented Notebook** | ✅ Done | Fully executed notebook with econometric derivations and reproducible ML pipelines |
+- [x] Repository named strictly `OIBSIP`.
+- [x] All notebooks pre-executed with visible tables, outputs, and visualizations.
+- [x] Download and load the authentic Advertising.csv dataset (200 market campaigns) (Section 2).
+- [x] Data loading and EDA: shape verification, null check (0 missing values), descriptive statistics (Section 3.1–3.3).
+- [x] Pairplot of all features: demonstrating non-linear concave growth along TV spend (Section 3.4).
+- [x] Individual scatter plots: 3-panel scatter series (Sales vs. TV, Sales vs. Radio, Sales vs. Newspaper) (Section 4).
+- [x] Correlation matrix heatmap: linear relationships ($TV: 0.78$, $Radio: 0.58$, $Newspaper: 0.23$) (Section 5).
+- [x] Train / test split: 80/20 train/test partition (`random_state=42`) (Section 6).
+- [x] Train Linear Regression baseline: fitted OLS Linear Regression as the standard baseline (Section 7).
+- [x] Train at least one additional model: Random Forest Regressor and Degree-2 Polynomial Regression (Section 7).
+- [x] Evaluate using MAE, RMSE, and $R^2$ score across train and test splits (Section 8).
+- [x] Residual plot for the best model: proving elimination of systematic errors under Polynomial Regression (Section 9).
+- [x] Interpretation: channel impact hierarchy evaluated via standardized beta coefficients and feature importances (Section 10).
+- [x] Clean, well-commented Jupyter Notebook with econometric derivations and reproducible ML pipelines.
 
 ---
 

@@ -140,7 +140,7 @@ All notebooks are fully compatible with [Google Colab](https://colab.research.go
 
 ---
 
-## 📜 Compliance & Submission Verification
+## 📋 Project Checklist
 
 This project is prepared in full compliance with the **Oasis Infobyte Master Onboarding Checklist**:
 - [x] Repository named strictly `OIBSIP`.

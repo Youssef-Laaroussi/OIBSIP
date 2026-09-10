@@ -4,7 +4,7 @@
 
 [![Track](https://img.shields.io/badge/Track-Data%20Science-2ea44f?style=for-the-badge&logo=python&logoColor=white)](https://oasisinfobyte.com/)
 [![Task](https://img.shields.io/badge/Task-4%20--%20Email%20Spam%20Detection-blue?style=for-the-badge)](https://oasisinfobyte.com/)
-[![Status](https://img.shields.io/badge/Status-100%25%20Completed-brightgreen?style=for-the-badge)](#-oasis-infobyte-task-checklist-compliance)
+[![Status](https://img.shields.io/badge/Status-100%25%20Completed-brightgreen?style=for-the-badge)](#-project-checklist)
 [![Best Model](https://img.shields.io/badge/Best%20Model-Linear%20SVM%20(F1%3D0.943)-blueviolet?style=for-the-badge)](#-performance-benchmark--trade-off-analysis)
 
 **Program:** Oasis Infobyte Summer Internship Program (SIP) — Data Science Track  
@@ -23,20 +23,20 @@ The analysis places significant emphasis on **production text preprocessing, add
 
 ---
 
-## ✅ Oasis Infobyte Task Checklist Compliance
+## 📋 Project Checklist
 
-| # | Oasis Infobyte Feature Requirement | Status | Implementation Details & Section Reference |
-| :-: | :--- | :---: | :--- |
-| 1 | **Download a suitable dataset** | ✅ Done | Sourced SMS Spam Collection benchmark dataset (5,572 raw records) (Section 2) |
-| 2 | **Data loading & class distribution check** | ✅ Done | Documented heavy class imbalance (87.4% Ham vs. 12.6% Spam) (Section 3) |
-| 3 | **Text preprocessing pipeline** | ✅ Done | Lowercasing, HTML entity decoding, punctuation/digit removal, stopwords, NLTK lemmatization (Section 4) |
-| 4 | **TF-IDF Feature extraction** | ✅ Done | Extracted 3,000 max features via `TfidfVectorizer` with inline mathematical explanation (Section 5) |
-| 5 | **Train / test split** | ✅ Done | 80/20 train/test partition stratified by class ratio (`stratify=y`) (Section 6) |
-| 6 | **Train at least 2 classifiers** | ✅ Done | 3 classifiers trained: Multinomial Naive Bayes (industry baseline), Balanced Logistic Regression, Balanced Linear SVM (Section 7) |
-| 7 | **Model Evaluation Suite** | ✅ Done | Accuracy, Precision, Recall, F1-Score, and individual Confusion Matrices for all models (Section 8) |
-| 8 | **Discussion: Why is Recall critical?** | ✅ Done | In-depth operational analysis comparing False Positive vs. False Negative business costs (Section 9) |
-| 9 | **(Bonus) WordCloud visualisations** | ✅ Done | High-resolution WordClouds contrasting top Spam terms against authentic Ham vocabulary (Section 10) |
-| 10 | **Clean, commented Jupyter Notebook** | ✅ Done | Fully executed notebook with reproducible NLTK pipeline and rich visualizations |
+- [x] Repository named strictly `OIBSIP`.
+- [x] All notebooks pre-executed with visible tables, outputs, and visualizations.
+- [x] Download and load the SMS Spam Collection benchmark dataset (5,572 raw records) (Section 2).
+- [x] Data loading & class distribution check: documented heavy class imbalance (87.4% Ham vs. 12.6% Spam) (Section 3).
+- [x] Text preprocessing pipeline: lowercasing, HTML entity decoding, punctuation/digit removal, stopwords, NLTK lemmatization (Section 4).
+- [x] TF-IDF Feature extraction: extracted 3,000 max features via `TfidfVectorizer` with inline mathematical explanation (Section 5).
+- [x] Train / test split: 80/20 train/test partition stratified by class ratio (`stratify=y`) (Section 6).
+- [x] Train at least 2 classifiers: 3 classifiers trained (Multinomial Naive Bayes, Balanced Logistic Regression, Balanced Linear SVM) (Section 7).
+- [x] Model Evaluation Suite: Accuracy, Precision, Recall, F1-Score, and individual Confusion Matrices for all models (Section 8).
+- [x] Discussion on Recall: in-depth operational analysis comparing False Positive vs. False Negative business costs (Section 9).
+- [x] (Bonus) WordCloud visualisations: contrasting top Spam terms against authentic Ham vocabulary (Section 10).
+- [x] Clean, commented Jupyter Notebook with reproducible NLTK pipeline and rich visualizations.
 
 ---
 

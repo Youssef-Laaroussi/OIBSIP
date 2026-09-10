@@ -4,7 +4,7 @@
 
 [![Track](https://img.shields.io/badge/Track-Data%20Science-2ea44f?style=for-the-badge&logo=python&logoColor=white)](https://oasisinfobyte.com/)
 [![Task](https://img.shields.io/badge/Task-3%20--%20Car%20Price%20Prediction-blue?style=for-the-badge)](https://oasisinfobyte.com/)
-[![Status](https://img.shields.io/badge/Status-100%25%20Completed-brightgreen?style=for-the-badge)](#-oasis-infobyte-task-checklist-compliance)
+[![Status](https://img.shields.io/badge/Status-100%25%20Completed-brightgreen?style=for-the-badge)](#-project-checklist)
 [![Best Model](https://img.shields.io/badge/Best%20Model-Random%20Forest%20(R%C2%B2%3D0.865)-blueviolet?style=for-the-badge)](#-model-performance-benchmark-evaluated-in-)
 
 **Program:** Oasis Infobyte Summer Internship Program (SIP) — Data Science Track  
@@ -23,21 +23,21 @@ Every engineering and modelling decision—from non-linear brand token extractio
 
 ---
 
-## ✅ Oasis Infobyte Task Checklist Compliance
+## 📋 Project Checklist
 
-| # | Oasis Infobyte Feature Requirement | Status | Implementation Details & Section Reference |
-| :-: | :--- | :---: | :--- |
-| 1 | **Download a suitable dataset** | ✅ Done | Sourced CarDekho used car dataset (4,340 listings, 8 attributes) (Section 2) |
-| 2 | **Data cleaning: nulls, duplicates & categories** | ✅ Done | Verified zero nulls, removed 763 duplicate listings, unified categorical strings (Section 3) |
-| 3 | **Feature engineering: age & brand** | ✅ Done | Derived `car_age` and extracted brand names with handling for compound brands (`Land Rover`, `OpelCorsa`) (Section 4) |
-| 4 | **EDA: distribution, boxplots & scatter** | ✅ Done | Analyzed price right-skewness (log1p transform), price vs. fuel type boxplot, and price vs. age scatter (Section 5) |
-| 5 | **Encode categorical variables** | ✅ Done | Domain-tailored encoding: Ordinal for ownership tiers, One-Hot Encoding for nominal variables (Section 6) |
-| 6 | **Feature correlation heatmap** | ✅ Done | Correlation matrix illustrating strong negative correlation with `car_age` ($r = -0.42$) (Section 7) |
-| 7 | **Train / test split** | ✅ Done | 80/20 train/test split with target transformation (`np.log1p`) to stabilize variance (Section 8) |
-| 8 | **Train at least 2 regression models** | ✅ Done | 3 models trained: Linear Regression (baseline), Random Forest Regressor, Gradient Boosting Regressor (Section 9) |
-| 9 | **Evaluate using MAE, RMSE, and R² score** | ✅ Done | Exponentiated predictions back to real Indian Rupees (₹) for transparent business evaluation (Section 10) |
-| 10 | **Feature importance chart for best model** | ✅ Done | Extracted and visualized Random Forest Gini feature importances highlighting `car_age` and luxury brands (Section 11) |
-| 11 | **Clean, commented Jupyter Notebook** | ✅ Done | Production-grade notebook with assertions, markdown explanations, and pre-computed visual outputs |
+- [x] Repository named strictly `OIBSIP`.
+- [x] All notebooks pre-executed with visible tables, outputs, and visualizations.
+- [x] Download and load the CarDekho used car dataset (4,340 listings, 8 attributes) (Section 2).
+- [x] Data cleaning: verified zero nulls, removed 763 duplicate listings, unified categorical strings (Section 3).
+- [x] Feature engineering: derived `car_age` and extracted brand names with handling for compound brands (`Land Rover`, `OpelCorsa`) (Section 4).
+- [x] EDA: price right-skewness analysis (log1p transform), price vs. fuel type boxplots, and price vs. age scatter plot (Section 5).
+- [x] Encode categorical variables: ordinal encoding for owner tiers and One-Hot Encoding for nominal variables (Section 6).
+- [x] Feature correlation heatmap: strong negative correlation with `car_age` ($r = -0.42$) (Section 7).
+- [x] Train / test split: 80/20 split with target transformation (`np.log1p`) to stabilize variance (Section 8).
+- [x] Train at least 2 regression models: Linear Regression (baseline), Random Forest Regressor, Gradient Boosting Regressor (Section 9).
+- [x] Evaluate using MAE, RMSE, and $R^2$ score (exponentiated predictions back to real Indian Rupees ₹) (Section 10).
+- [x] Feature importance chart for the best model: Random Forest Gini importances highlighting `car_age` and luxury brands (Section 11).
+- [x] Clean, commented Jupyter Notebook with assertions, markdown explanations, and pre-computed visual outputs.
 
 ---
 
