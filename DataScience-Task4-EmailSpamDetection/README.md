@@ -27,16 +27,16 @@ The analysis places significant emphasis on **production text preprocessing, add
 
 | # | Oasis Infobyte Feature Requirement | Status | Implementation Details & Section Reference |
 | :-: | :--- | :---: | :--- |
-| 1 | **Download a suitable dataset** | `[x]` Done | Sourced SMS Spam Collection benchmark dataset (5,572 raw records) (Section 2) |
-| 2 | **Data loading & class distribution check** | `[x]` Done | Documented heavy class imbalance (87.4% Ham vs. 12.6% Spam) (Section 3) |
-| 3 | **Text preprocessing pipeline** | `[x]` Done | Lowercasing, HTML entity decoding, punctuation/digit removal, stopwords, NLTK lemmatization (Section 4) |
-| 4 | **TF-IDF Feature extraction** | `[x]` Done | Extracted 3,000 max features via `TfidfVectorizer` with inline mathematical explanation (Section 5) |
-| 5 | **Train / test split** | `[x]` Done | 80/20 train/test partition stratified by class ratio (`stratify=y`) (Section 6) |
-| 6 | **Train at least 2 classifiers** | `[x]` Done | 3 classifiers trained: Multinomial Naive Bayes (industry baseline), Balanced Logistic Regression, Balanced Linear SVM (Section 7) |
-| 7 | **Model Evaluation Suite** | `[x]` Done | Accuracy, Precision, Recall, F1-Score, and individual Confusion Matrices for all models (Section 8) |
-| 8 | **Discussion: Why is Recall critical?** | `[x]` Done | In-depth operational analysis comparing False Positive vs. False Negative business costs (Section 9) |
-| 9 | **(Bonus) WordCloud visualisations** | `[x]` Done | High-resolution WordClouds contrasting top Spam terms against authentic Ham vocabulary (Section 10) |
-| 10 | **Clean, commented Jupyter Notebook** | `[x]` Done | Fully executed notebook with reproducible NLTK pipeline and rich visualizations |
+| 1 | **Download a suitable dataset** | ✅ Done | Sourced SMS Spam Collection benchmark dataset (5,572 raw records) (Section 2) |
+| 2 | **Data loading & class distribution check** | ✅ Done | Documented heavy class imbalance (87.4% Ham vs. 12.6% Spam) (Section 3) |
+| 3 | **Text preprocessing pipeline** | ✅ Done | Lowercasing, HTML entity decoding, punctuation/digit removal, stopwords, NLTK lemmatization (Section 4) |
+| 4 | **TF-IDF Feature extraction** | ✅ Done | Extracted 3,000 max features via `TfidfVectorizer` with inline mathematical explanation (Section 5) |
+| 5 | **Train / test split** | ✅ Done | 80/20 train/test partition stratified by class ratio (`stratify=y`) (Section 6) |
+| 6 | **Train at least 2 classifiers** | ✅ Done | 3 classifiers trained: Multinomial Naive Bayes (industry baseline), Balanced Logistic Regression, Balanced Linear SVM (Section 7) |
+| 7 | **Model Evaluation Suite** | ✅ Done | Accuracy, Precision, Recall, F1-Score, and individual Confusion Matrices for all models (Section 8) |
+| 8 | **Discussion: Why is Recall critical?** | ✅ Done | In-depth operational analysis comparing False Positive vs. False Negative business costs (Section 9) |
+| 9 | **(Bonus) WordCloud visualisations** | ✅ Done | High-resolution WordClouds contrasting top Spam terms against authentic Ham vocabulary (Section 10) |
+| 10 | **Clean, commented Jupyter Notebook** | ✅ Done | Fully executed notebook with reproducible NLTK pipeline and rich visualizations |
 
 ---
 
@@ -100,8 +100,21 @@ DataScience-Task4-EmailSpamDetection/
 
 ## 🚀 How to Run
 
-1. Ensure `spam.csv` is located in this directory.
-2. Launch with Jupyter Notebook:
+### Option A: Run Locally (Jupyter Notebook / VS Code)
+1. **Activate virtual environment & navigate to task:**
+   ```bash
+   source venv/bin/activate    # On Windows: venv\Scripts\activate
+   cd DataScience-Task4-EmailSpamDetection
+   ```
+2. **Launch Jupyter Notebook:**
    ```bash
    jupyter notebook Email_Spam_Detection.ipynb
    ```
+   *(Ensure `spam.csv` is in this directory — it is included by default).*
+
+### Option B: Run on Google Colab
+1. Upload `Email_Spam_Detection.ipynb` to [Google Colab](https://colab.research.google.com/).
+2. The notebook includes a multi-environment data loader:
+   - If `spam.csv` is uploaded to `/content/` or available in your Google Drive, it is detected automatically.
+   - If not found, an automatic upload prompt will appear to let you select the CSV directly from your computer.
+3. Run all cells (`Runtime` ➔ `Run all` or `Ctrl+F9`).

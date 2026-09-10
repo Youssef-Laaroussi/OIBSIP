@@ -25,17 +25,17 @@ Explore and quantify India's state-level unemployment dynamics to uncover region
 
 | # | Oasis Infobyte Feature Requirement | Status | Implementation Details & Section Reference |
 | :-: | :--- | :---: | :--- |
-| 1 | **Download a suitable dataset** | `[x]` Done | Sourced authentic "Unemployment in India" dataset (740 records, 28 States/UTs) (Section 2) |
-| 2 | **Data loading, shape inspection & null check** | `[x]` Done | Shape verification (768 raw rows), null check, dropped empty padding rows (Section 3.1–3.2) |
-| 3 | **Data type conversion & cleaning** | `[x]` Done | Stripped stray whitespace from column names/strings, parsed dates to datetime (Section 3.3) |
-| 4 | **EDA: Region-wise average rates** | `[x]` Done | Computed and ranked average unemployment across all 28 states/UTs (Section 4) |
-| 5 | **EDA: Month-wise national trends** | `[x]` Done | Aggregated monthly national time-series identifying the April 2020 structural break (Section 5) |
-| 6 | **Time-series line chart for major states** | `[x]` Done | Temporal evolution for 5 major states (Maharashtra, Delhi, Tamil Nadu, UP, West Bengal) (Section 6) |
-| 7 | **Bar chart: Top 10 states by unemployment** | `[x]` Done | Horizontal bar chart of top 10 highest-unemployment states with direct percentage labels (Section 7) |
-| 8 | **Heatmap: Correlation between indicators** | `[x]` Done | Evaluated correlation between Unemployment Rate, Employed headcount, and Labour Participation (Section 8) |
-| 9 | **Pre-COVID vs. Post-COVID comparison** | `[x]` Done | Empirically derived cutoff (Mar 2020), compared means/medians, and validated with Mann-Whitney U test (Section 9) |
-| 10 | **Written observations between charts** | `[x]` Done | Markdown cells after every visualization detailing economic insights and policy implications (Section 4–11) |
-| 11 | **Clean, well-commented Notebook** | `[x]` Done | Pre-executed Jupyter notebook with clean typography, robust Matplotlib rendering, and zero errors |
+| 1 | **Download a suitable dataset** | ✅ Done | Sourced authentic "Unemployment in India" dataset (740 records, 28 States/UTs) (Section 2) |
+| 2 | **Data loading, shape inspection & null check** | ✅ Done | Shape verification (768 raw rows), null check, dropped empty padding rows (Section 3.1–3.2) |
+| 3 | **Data type conversion & cleaning** | ✅ Done | Stripped stray whitespace from column names/strings, parsed dates to datetime (Section 3.3) |
+| 4 | **EDA: Region-wise average rates** | ✅ Done | Computed and ranked average unemployment across all 28 states/UTs (Section 4) |
+| 5 | **EDA: Month-wise national trends** | ✅ Done | Aggregated monthly national time-series identifying the April 2020 structural break (Section 5) |
+| 6 | **Time-series line chart for major states** | ✅ Done | Temporal evolution for 5 major states (Maharashtra, Delhi, Tamil Nadu, UP, West Bengal) (Section 6) |
+| 7 | **Bar chart: Top 10 states by unemployment** | ✅ Done | Horizontal bar chart of top 10 highest-unemployment states with direct percentage labels (Section 7) |
+| 8 | **Heatmap: Correlation between indicators** | ✅ Done | Evaluated correlation between Unemployment Rate, Employed headcount, and Labour Participation (Section 8) |
+| 9 | **Pre-COVID vs. Post-COVID comparison** | ✅ Done | Empirically derived cutoff (Mar 2020), compared means/medians, and validated with Mann-Whitney U test (Section 9) |
+| 10 | **Written observations between charts** | ✅ Done | Markdown cells after every visualization detailing economic insights and policy implications (Section 4–11) |
+| 11 | **Clean, well-commented Notebook** | ✅ Done | Pre-executed Jupyter notebook with clean typography, robust Matplotlib rendering, and zero errors |
 
 ---
 
@@ -126,8 +126,21 @@ DataScience-Task2-UnemploymentAnalysis/
 
 ## 🚀 How to Run
 
-1. Ensure `Unemployment in India.csv` is located in this directory.
-2. Launch with Jupyter Notebook:
+### Option A: Run Locally (Jupyter Notebook / VS Code)
+1. **Activate virtual environment & navigate to task:**
+   ```bash
+   source venv/bin/activate    # On Windows: venv\Scripts\activate
+   cd DataScience-Task2-UnemploymentAnalysis
+   ```
+2. **Launch Jupyter Notebook:**
    ```bash
    jupyter notebook Unemployment_Analysis_India.ipynb
    ```
+   *(Ensure `Unemployment in India.csv` is in this directory — it is included by default).*
+
+### Option B: Run on Google Colab
+1. Upload `Unemployment_Analysis_India.ipynb` to [Google Colab](https://colab.research.google.com/).
+2. The notebook features a robust multi-environment data loader:
+   - If `Unemployment in India.csv` is uploaded to `/content/` or available in your Google Drive, it is loaded automatically.
+   - If the file is not found, an automatic upload prompt will appear to let you select the CSV directly from your machine.
+3. Run all cells (`Runtime` ➔ `Run all` or `Ctrl+F9`).

@@ -27,18 +27,18 @@ The core contribution of this project is conducting **rigorous residual diagnost
 
 | # | Oasis Infobyte Feature Requirement | Status | Implementation Details & Section Reference |
 | :-: | :--- | :---: | :--- |
-| 1 | **Download a suitable dataset** | `[x]` Done | Sourced authentic Advertising.csv dataset (200 market campaigns) (Section 2) |
-| 2 | **Data loading and EDA** | `[x]` Done | Shape verification, null check (0 missing values), descriptive statistics (Section 3.1–3.3) |
-| 3 | **Pairplot of all features** | `[x]` Done | Multi-variable pairplot demonstrating non-linear concave growth along TV spend (Section 3.4) |
-| 4 | **Individual scatter plots** | `[x]` Done | 3-panel scatter series: Sales vs. TV, Sales vs. Radio, Sales vs. Newspaper (Section 4) |
-| 5 | **Correlation matrix heatmap** | `[x]` Done | Correlation heatmap quantifying linear relationships ($TV: 0.78$, $Radio: 0.58$, $Newspaper: 0.23$) (Section 5) |
-| 6 | **Train / test split** | `[x]` Done | 80/20 train/test partition (`random_state=42`) (Section 6) |
-| 7 | **Train Linear Regression baseline** | `[x]` Done | Fitted OLS Linear Regression model as the standard baseline (Section 7) |
-| 8 | **Train at least one additional model** | `[x]` Done | Evaluated 2 advanced alternatives: Random Forest Regressor and Degree-2 Polynomial Regression (Section 7) |
-| 9 | **Evaluate using MAE, RMSE, and R² score** | `[x]` Done | Comprehensive metric benchmarking across train and held-out test splits (Section 8) |
-| 10 | **Residual plot for the best model** | `[x]` Done | Plotted residuals vs. predictions proving elimination of systematic errors under Polynomial Regression (Section 9) |
-| 11 | **Interpretation: Channel impact hierarchy** | `[x]` Done | Attribution evaluated via standardized beta coefficients and Random Forest feature importances (Section 10) |
-| 12 | **Clean, well-commented Notebook** | `[x]` Done | Fully executed notebook with econometric derivations and reproducible ML pipelines |
+| 1 | **Download a suitable dataset** | ✅ Done | Sourced authentic Advertising.csv dataset (200 market campaigns) (Section 2) |
+| 2 | **Data loading and EDA** | ✅ Done | Shape verification, null check (0 missing values), descriptive statistics (Section 3.1–3.3) |
+| 3 | **Pairplot of all features** | ✅ Done | Multi-variable pairplot demonstrating non-linear concave growth along TV spend (Section 3.4) |
+| 4 | **Individual scatter plots** | ✅ Done | 3-panel scatter series: Sales vs. TV, Sales vs. Radio, Sales vs. Newspaper (Section 4) |
+| 5 | **Correlation matrix heatmap** | ✅ Done | Correlation heatmap quantifying linear relationships ($TV: 0.78$, $Radio: 0.58$, $Newspaper: 0.23$) (Section 5) |
+| 6 | **Train / test split** | ✅ Done | 80/20 train/test partition (`random_state=42`) (Section 6) |
+| 7 | **Train Linear Regression baseline** | ✅ Done | Fitted OLS Linear Regression model as the standard baseline (Section 7) |
+| 8 | **Train at least one additional model** | ✅ Done | Evaluated 2 advanced alternatives: Random Forest Regressor and Degree-2 Polynomial Regression (Section 7) |
+| 9 | **Evaluate using MAE, RMSE, and R² score** | ✅ Done | Comprehensive metric benchmarking across train and held-out test splits (Section 8) |
+| 10 | **Residual plot for the best model** | ✅ Done | Plotted residuals vs. predictions proving elimination of systematic errors under Polynomial Regression (Section 9) |
+| 11 | **Interpretation: Channel impact hierarchy** | ✅ Done | Attribution evaluated via standardized beta coefficients and Random Forest feature importances (Section 10) |
+| 12 | **Clean, well-commented Notebook** | ✅ Done | Fully executed notebook with econometric derivations and reproducible ML pipelines |
 
 ---
 
@@ -104,8 +104,21 @@ DataScience-Task5-SalesPrediction/
 
 ## 🚀 How to Run
 
-1. Ensure `Advertising.csv` is located in this directory.
-2. Launch with Jupyter Notebook:
+### Option A: Run Locally (Jupyter Notebook / VS Code)
+1. **Activate virtual environment & navigate to task:**
+   ```bash
+   source venv/bin/activate    # On Windows: venv\Scripts\activate
+   cd DataScience-Task5-SalesPrediction
+   ```
+2. **Launch Jupyter Notebook:**
    ```bash
    jupyter notebook Sales_Prediction.ipynb
    ```
+   *(Ensure `Advertising.csv` is in this directory — it is included by default).*
+
+### Option B: Run on Google Colab
+1. Upload `Sales_Prediction.ipynb` to [Google Colab](https://colab.research.google.com/).
+2. The notebook features a multi-environment data loader:
+   - If `Advertising.csv` is uploaded to `/content/` or available in your Google Drive, it is detected automatically.
+   - If not found, an automatic upload prompt will appear to let you select the CSV directly from your computer.
+3. Run all cells (`Runtime` ➔ `Run all` or `Ctrl+F9`).

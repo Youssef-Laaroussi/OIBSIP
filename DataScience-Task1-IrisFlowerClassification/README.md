@@ -27,15 +27,15 @@ The analytical focus is grounded in **statistical feature selection, leak-free c
 
 | # | Oasis Infobyte Feature Requirement | Status | Implementation Details & Section Reference |
 | :-: | :--- | :---: | :--- |
-| 1 | **Load the Iris dataset** | `[x]` Done | Loaded directly via `sklearn.datasets.load_iris()` (Section 2) |
-| 2 | **Exploratory Data Analysis (EDA)** | `[x]` Done | Shape verification, dtypes, missing value verification (0 nulls), summary stats (Section 3) |
-| 3 | **Visualisations** | `[x]` Done | Pairplot by species and multi-panel box plots for all dimensions (Section 4) |
-| 4 | **Feature selection discussion** | `[x]` Done | Quantitative ANOVA F-test (`f_classif`) proving petal length/width dominance ($F > 960$) (Section 5) |
-| 5 | **Train / Test Split** | `[x]` Done | 80/20 stratified split (`train_test_split`, `stratify=y`, `random_state=42`) (Section 6) |
-| 6 | **Train at least 2 classifiers** | `[x]` Done | 4 distinct model families: Logistic Regression, KNN, Decision Tree, Random Forest (Section 8) |
-| 7 | **Model Evaluation Suite** | `[x]` Done | Accuracy, confusion matrix, classification report (Precision, Recall, F1, ROC-AUC) (Section 9) |
-| 8 | **Best Model Declaration** | `[x]` Done | Declared **K-Nearest Neighbours ($k=3$)** with 96.7% CV accuracy and full justification (Section 11) |
-| 9 | **Clean, Commented Notebook** | `[x]` Done | Production-grade `.ipynb` with Markdown documentation, PCA projection, and serialized pipeline |
+| 1 | **Load the Iris dataset** | ✅ Done | Loaded directly via `sklearn.datasets.load_iris()` (Section 2) |
+| 2 | **Exploratory Data Analysis (EDA)** | ✅ Done | Shape verification, dtypes, missing value verification (0 nulls), summary stats (Section 3) |
+| 3 | **Visualisations** | ✅ Done | Pairplot by species and multi-panel box plots for all dimensions (Section 4) |
+| 4 | **Feature selection discussion** | ✅ Done | Quantitative ANOVA F-test (`f_classif`) proving petal length/width dominance ($F > 960$) (Section 5) |
+| 5 | **Train / Test Split** | ✅ Done | 80/20 stratified split (`train_test_split`, `stratify=y`, `random_state=42`) (Section 6) |
+| 6 | **Train at least 2 classifiers** | ✅ Done | 4 distinct model families: Logistic Regression, KNN, Decision Tree, Random Forest (Section 8) |
+| 7 | **Model Evaluation Suite** | ✅ Done | Accuracy, confusion matrix, classification report (Precision, Recall, F1, ROC-AUC) (Section 9) |
+| 8 | **Best Model Declaration** | ✅ Done | Declared **K-Nearest Neighbours ($k=3$)** with 96.7% CV accuracy and full justification (Section 11) |
+| 9 | **Clean, Commented Notebook** | ✅ Done | Production-grade `.ipynb` with Markdown documentation, PCA projection, and serialized pipeline |
 
 ---
 
@@ -106,19 +106,33 @@ DataScience-Task1-IrisFlowerClassification/
 ---
 
 ## 🚀 How to Run
-
-1. **Launch Jupyter Notebook / Google Colab:**
+ 
+### Option A: Run Locally (Jupyter Notebook / VS Code)
+1. **Activate virtual environment & navigate to task:**
+   ```bash
+   source venv/bin/activate    # On Windows: venv\Scripts\activate
+   cd DataScience-Task1-IrisFlowerClassification
+   ```
+2. **Launch Jupyter Notebook:**
    ```bash
    jupyter notebook Iris_Flower_Classification.ipynb
    ```
-2. **Reload the Serialized Model in Python:**
-   ```python
-   import joblib
+   *(The Iris dataset is built directly into scikit-learn — no external CSV download needed).*
 
-   bundle = joblib.load("iris_best_model.joblib")
-   model = bundle["model"]
-   scaler = bundle["scaler"]
-   target_names = bundle["target_names"]
+### Option B: Run on Google Colab
+1. Upload `Iris_Flower_Classification.ipynb` to [Google Colab](https://colab.research.google.com/).
+2. Run all cells (`Runtime` ➔ `Run all` or `Ctrl+F9`).
 
-   print(f"Loaded {model.__class__.__name__} successfully for classes: {target_names}")
-   ```
+---
+
+### 📦 Reload the Serialized Model in Python
+```python
+import joblib
+
+bundle = joblib.load("iris_best_model.joblib")
+model = bundle["model"]
+scaler = bundle["scaler"]
+target_names = bundle["target_names"]
+
+print(f"Loaded {model.__class__.__name__} successfully for classes: {target_names}")
+```
