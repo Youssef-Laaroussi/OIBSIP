@@ -18,7 +18,7 @@
 
 ### 👨‍💻 Candidate Profile
 **Youssef Laaroussi**  
-*Master's in Data Science & Artificial Intelligence*  
+*Master's in Artificial Intelligence & Big Data*  
 Specialized in Applied Machine Learning, Statistical Inference, and Predictive Modeling.  
 🌐 [GitHub Profile](https://github.com/Youssef-Laaroussi) • 💼 [LinkedIn](https://linkedin.com) • 📧 Available for full-time Data Scientist & ML Engineer opportunities
 
@@ -156,6 +156,6 @@ This project is prepared in full compliance with the **Oasis Infobyte Master Onb
 I am actively seeking opportunities in **Data Science**, **Machine Learning Engineering**, and **Applied AI**.
 
 - **Author:** Youssef Laaroussi
-- **Degree:** Master of Science in Data Science & Artificial Intelligence
+- **Degree:** Master of Science in Artificial Intelligence & Big Data
 - **GitHub:** [Youssef-Laaroussi](https://github.com/Youssef-Laaroussi)
 - **Organization:** [Oasis Infobyte](https://oasisinfobyte.com/)

@@ -8,7 +8,7 @@
 [![Best Model](https://img.shields.io/badge/Best%20Model-KNN%20(k=3)-blueviolet?style=for-the-badge)](#-model-benchmark--evaluation-metrics)
 
 **Program:** Oasis Infobyte Summer Internship Program (SIP) — Data Science Track  
-**Author:** **Youssef Laaroussi** (Master's in Data Science & Artificial Intelligence)  
+**Author:** **Youssef Laaroussi** (Master's in Artificial Intelligence & Big Data)  
 **Deliverable:** `Iris_Flower_Classification.ipynb` (Google Colab & Jupyter Ready, Pre-executed)
 
 </div>

@@ -8,7 +8,7 @@
 [![Best Model](https://img.shields.io/badge/Best%20Model-Polynomial%20(R%C2%B2%3D0.986)-blueviolet?style=for-the-badge)](#-model-performance-comparison)
 
 **Program:** Oasis Infobyte Summer Internship Program (SIP) — Data Science Track  
-**Author:** **Youssef Laaroussi** (Master's in Data Science & Artificial Intelligence)  
+**Author:** **Youssef Laaroussi** (Master's in Artificial Intelligence & Big Data)  
 **Deliverable:** `Sales_Prediction.ipynb` (Google Colab & Jupyter Ready, Pre-executed)
 
 </div>

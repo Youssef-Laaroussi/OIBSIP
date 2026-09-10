@@ -8,7 +8,7 @@
 [![Best Model](https://img.shields.io/badge/Best%20Model-Linear%20SVM%20(F1%3D0.943)-blueviolet?style=for-the-badge)](#-performance-benchmark--trade-off-analysis)
 
 **Program:** Oasis Infobyte Summer Internship Program (SIP) — Data Science Track  
-**Author:** **Youssef Laaroussi** (Master's in Data Science & Artificial Intelligence)  
+**Author:** **Youssef Laaroussi** (Master's in Artificial Intelligence & Big Data)  
 **Deliverable:** `Email_Spam_Detection.ipynb` (Google Colab & Jupyter Ready, Pre-executed)
 
 </div>

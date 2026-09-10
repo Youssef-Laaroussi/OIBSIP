@@ -8,7 +8,7 @@
 [![Significance](https://img.shields.io/badge/Mann--Whitney%20U-p%20%3C%200.001-red?style=for-the-badge)](#-statistical-hypothesis-testing-results)
 
 **Program:** Oasis Infobyte Summer Internship Program (SIP) — Data Science Track  
-**Author:** **Youssef Laaroussi** (Master's in Data Science & Artificial Intelligence)  
+**Author:** **Youssef Laaroussi** (Master's in Artificial Intelligence & Big Data)  
 **Deliverable:** `Unemployment_Analysis_India.ipynb` (Google Colab & Jupyter Ready, Pre-executed)
 
 </div>
