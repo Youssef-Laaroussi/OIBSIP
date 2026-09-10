@@ -136,7 +136,7 @@ jupyter notebook
 Navigate to any of the 5 task directories to inspect or rerun the notebooks.
 
 ### 4. Or Run via Google Colab
-All notebooks are fully compatible with [Google Colab](https://colab.research.google.com/). Each notebook includes a resilient multi-path data loader that automatically searches local paths, Google Drive, and provides an automatic upload prompt if a dataset needs to be provided.
+All notebooks are fully compatible with [Google Colab](https://colab.research.google.com/). Each notebook includes a resilient multi-path data loader that automatically resolves candidate paths (local workspace, Colab `/content/` root, customizable Google Drive path such as `/content/drive/MyDrive/your_path/`, or an interactive upload widget fallback).
 
 ---
 

@@ -119,6 +119,7 @@ DataScience-Task5-SalesPrediction/
 ### Option B: Run on Google Colab
 1. Upload `Sales_Prediction.ipynb` to [Google Colab](https://colab.research.google.com/).
 2. The notebook features a multi-environment data loader:
-   - If `Advertising.csv` is uploaded to `/content/` or available in your Google Drive, it is detected automatically.
-   - If not found, an automatic upload prompt will appear to let you select the CSV directly from your computer.
+   - **Local / Colab root:** If `Advertising.csv` is uploaded to `/content/` or located in the workspace, it is detected automatically.
+   - **Google Drive:** If you mount Drive, set your custom directory in `candidate_paths` (e.g. `/content/drive/MyDrive/your_path/Advertising.csv`).
+   - **Interactive fallback:** If not found, an automatic upload widget prompts you to select the CSV directly from your computer.
 3. Run all cells (`Runtime` ➔ `Run all` or `Ctrl+F9`).

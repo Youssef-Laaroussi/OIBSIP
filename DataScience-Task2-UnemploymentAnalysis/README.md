@@ -141,6 +141,7 @@ DataScience-Task2-UnemploymentAnalysis/
 ### Option B: Run on Google Colab
 1. Upload `Unemployment_Analysis_India.ipynb` to [Google Colab](https://colab.research.google.com/).
 2. The notebook features a robust multi-environment data loader:
-   - If `Unemployment in India.csv` is uploaded to `/content/` or available in your Google Drive, it is loaded automatically.
-   - If the file is not found, an automatic upload prompt will appear to let you select the CSV directly from your machine.
+   - **Local / Colab root:** If `Unemployment in India.csv` is uploaded to `/content/` or located in the workspace, it is detected automatically.
+   - **Google Drive:** If you mount Drive, set your custom directory in `candidate_paths` (e.g. `/content/drive/MyDrive/your_path/Unemployment in India.csv`).
+   - **Interactive fallback:** If the file is not found, an automatic upload widget prompts you to select the CSV directly from your computer.
 3. Run all cells (`Runtime` ➔ `Run all` or `Ctrl+F9`).

@@ -124,6 +124,7 @@ DataScience-Task3-CarPricePrediction/
 ### Option B: Run on Google Colab
 1. Upload `Car_Price_Prediction.ipynb` to [Google Colab](https://colab.research.google.com/).
 2. The notebook includes a multi-environment data loader:
-   - If `CAR DETAILS FROM CAR DEKHO.csv` is uploaded to `/content/` or available in your Google Drive, it is detected automatically.
-   - If not found, an automatic upload prompt will appear to let you select the CSV file directly from your computer.
+   - **Local / Colab root:** If `CAR DETAILS FROM CAR DEKHO.csv` is uploaded to `/content/` or located in the workspace, it is detected automatically.
+   - **Google Drive:** If you mount Drive, set your custom directory in `candidate_paths` (e.g. `/content/drive/MyDrive/your_path/CAR DETAILS FROM CAR DEKHO.csv`).
+   - **Interactive fallback:** If not found, an automatic upload widget prompts you to select the CSV file directly from your computer.
 3. Run all cells (`Runtime` ➔ `Run all` or `Ctrl+F9`).
