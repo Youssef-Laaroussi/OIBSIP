@@ -4,7 +4,7 @@
 
 [![Track](https://img.shields.io/badge/Track-Data%20Science-2ea44f?style=for-the-badge&logo=python&logoColor=white)](https://oasisinfobyte.com/)
 [![Task](https://img.shields.io/badge/Task-2%20--%20Unemployment%20Analysis-blue?style=for-the-badge)](https://oasisinfobyte.com/)
-[![Status](https://img.shields.io/badge/Status-100%25%20Completed-brightgreen?style=for-the-badge)](#-oasis-infobyte-task-checklist-compliance)
+[![Status](https://img.shields.io/badge/Status-100%25%20Completed-brightgreen?style=for-the-badge)](#-project-checklist)
 [![Significance](https://img.shields.io/badge/Mann--Whitney%20U-p%20%3C%200.001-red?style=for-the-badge)](#-statistical-hypothesis-testing-results)
 
 **Program:** Oasis Infobyte Summer Internship Program (SIP) — Data Science Track  
@@ -21,21 +21,21 @@ Explore and quantify India's state-level unemployment dynamics to uncover region
 
 ---
 
-## ✅ Oasis Infobyte Task Checklist Compliance
+## 📋 Project Checklist
 
-| # | Oasis Infobyte Feature Requirement | Status | Implementation Details & Section Reference |
-| :-: | :--- | :---: | :--- |
-| 1 | **Download a suitable dataset** | ✅ Done | Sourced authentic "Unemployment in India" dataset (740 records, 28 States/UTs) (Section 2) |
-| 2 | **Data loading, shape inspection & null check** | ✅ Done | Shape verification (768 raw rows), null check, dropped empty padding rows (Section 3.1–3.2) |
-| 3 | **Data type conversion & cleaning** | ✅ Done | Stripped stray whitespace from column names/strings, parsed dates to datetime (Section 3.3) |
-| 4 | **EDA: Region-wise average rates** | ✅ Done | Computed and ranked average unemployment across all 28 states/UTs (Section 4) |
-| 5 | **EDA: Month-wise national trends** | ✅ Done | Aggregated monthly national time-series identifying the April 2020 structural break (Section 5) |
-| 6 | **Time-series line chart for major states** | ✅ Done | Temporal evolution for 5 major states (Maharashtra, Delhi, Tamil Nadu, UP, West Bengal) (Section 6) |
-| 7 | **Bar chart: Top 10 states by unemployment** | ✅ Done | Horizontal bar chart of top 10 highest-unemployment states with direct percentage labels (Section 7) |
-| 8 | **Heatmap: Correlation between indicators** | ✅ Done | Evaluated correlation between Unemployment Rate, Employed headcount, and Labour Participation (Section 8) |
-| 9 | **Pre-COVID vs. Post-COVID comparison** | ✅ Done | Empirically derived cutoff (Mar 2020), compared means/medians, and validated with Mann-Whitney U test (Section 9) |
-| 10 | **Written observations between charts** | ✅ Done | Markdown cells after every visualization detailing economic insights and policy implications (Section 4–11) |
-| 11 | **Clean, well-commented Notebook** | ✅ Done | Pre-executed Jupyter notebook with clean typography, robust Matplotlib rendering, and zero errors |
+- [x] Repository named strictly `OIBSIP`.
+- [x] All notebooks pre-executed with visible tables, outputs, and visualizations.
+- [x] Download and load the authentic "Unemployment in India" dataset (740 records, 28 States/UTs) (Section 2).
+- [x] Data loading, shape inspection, null check, and dropped empty padding rows (Section 3.1–3.2).
+- [x] Data type conversion and cleaning: stripped whitespace and parsed dates to datetime (Section 3.3).
+- [x] EDA: region-wise average unemployment rates across all 28 states/UTs (Section 4).
+- [x] EDA: month-wise national trends identifying the April 2020 structural break (Section 5).
+- [x] Time-series line chart for major states (Maharashtra, Delhi, Tamil Nadu, UP, West Bengal) (Section 6).
+- [x] Bar chart: Top 10 states by highest unemployment rate with direct labels (Section 7).
+- [x] Heatmap: correlation between Unemployment Rate, Employed headcount, and Labour Participation (Section 8).
+- [x] Pre-COVID vs. Post-COVID comparison: mean/median surge validated with Mann-Whitney U test ($p = 8.79 \times 10^{-17}$) (Section 9).
+- [x] Written observations detailing economic insights and policy implications after every chart (Section 4–11).
+- [x] Clean, well-commented Jupyter Notebook with robust Matplotlib rendering and zero errors.
 
 ---
 
