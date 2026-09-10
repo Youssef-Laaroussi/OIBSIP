@@ -4,7 +4,7 @@
 
 [![Track](https://img.shields.io/badge/Track-Data%20Science-2ea44f?style=for-the-badge&logo=python&logoColor=white)](https://oasisinfobyte.com/)
 [![Task](https://img.shields.io/badge/Task-1%20--%20Iris%20Classification-blue?style=for-the-badge)](https://oasisinfobyte.com/)
-[![Status](https://img.shields.io/badge/Status-100%25%20Completed-brightgreen?style=for-the-badge)](#-oasis-infobyte-task-checklist-compliance)
+[![Status](https://img.shields.io/badge/Status-100%25%20Completed-brightgreen?style=for-the-badge)](#-project-checklist)
 [![Best Model](https://img.shields.io/badge/Best%20Model-KNN%20(k=3)-blueviolet?style=for-the-badge)](#-model-benchmark--evaluation-metrics)
 
 **Program:** Oasis Infobyte Summer Internship Program (SIP) — Data Science Track  
@@ -23,19 +23,19 @@ The analytical focus is grounded in **statistical feature selection, leak-free c
 
 ---
 
-## ✅ Oasis Infobyte Task Checklist Compliance
+## 📋 Project Checklist
 
-| # | Oasis Infobyte Feature Requirement | Status | Implementation Details & Section Reference |
-| :-: | :--- | :---: | :--- |
-| 1 | **Load the Iris dataset** | ✅ Done | Loaded directly via `sklearn.datasets.load_iris()` (Section 2) |
-| 2 | **Exploratory Data Analysis (EDA)** | ✅ Done | Shape verification, dtypes, missing value verification (0 nulls), summary stats (Section 3) |
-| 3 | **Visualisations** | ✅ Done | Pairplot by species and multi-panel box plots for all dimensions (Section 4) |
-| 4 | **Feature selection discussion** | ✅ Done | Quantitative ANOVA F-test (`f_classif`) proving petal length/width dominance ($F > 960$) (Section 5) |
-| 5 | **Train / Test Split** | ✅ Done | 80/20 stratified split (`train_test_split`, `stratify=y`, `random_state=42`) (Section 6) |
-| 6 | **Train at least 2 classifiers** | ✅ Done | 4 distinct model families: Logistic Regression, KNN, Decision Tree, Random Forest (Section 8) |
-| 7 | **Model Evaluation Suite** | ✅ Done | Accuracy, confusion matrix, classification report (Precision, Recall, F1, ROC-AUC) (Section 9) |
-| 8 | **Best Model Declaration** | ✅ Done | Declared **K-Nearest Neighbours ($k=3$)** with 96.7% CV accuracy and full justification (Section 11) |
-| 9 | **Clean, Commented Notebook** | ✅ Done | Production-grade `.ipynb` with Markdown documentation, PCA projection, and serialized pipeline |
+- [x] Repository named strictly `OIBSIP`.
+- [x] All notebooks pre-executed with visible tables, outputs, and visualizations.
+- [x] Load the Iris dataset using `sklearn.datasets.load_iris()` (Section 2).
+- [x] Exploratory Data Analysis (EDA): shape verification, dtypes, missing values (0 nulls), summary statistics (Section 3).
+- [x] Visualisations: pairplot by species and multi-panel box plots for all dimensions (Section 4).
+- [x] Feature selection discussion: quantitative ANOVA F-test (`f_classif`) proving petal length/width dominance ($F > 960$) (Section 5).
+- [x] Train / Test Split: 80/20 stratified split (`train_test_split`, `stratify=y`, `random_state=42`) (Section 6).
+- [x] Train at least 2 classifiers: 4 distinct model families (Logistic Regression, KNN, Decision Tree, Random Forest) (Section 8).
+- [x] Model Evaluation Suite: Accuracy, Confusion Matrix, Classification Report (Precision, Recall, F1, ROC-AUC) (Section 9).
+- [x] Best Model Declaration: Declared **K-Nearest Neighbours ($k=3$)** with 96.7% CV accuracy and full justification (Section 11).
+- [x] Clean, commented Jupyter Notebook with PCA projection and serialized pipeline.
 
 ---
 
